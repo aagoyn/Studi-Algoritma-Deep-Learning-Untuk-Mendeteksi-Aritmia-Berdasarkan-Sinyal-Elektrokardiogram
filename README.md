@@ -38,12 +38,9 @@ from tensorflow.keras.optimizers import Adam
 from keras.utils.np_utils import to_categorical
 from keras.utils.vis_utils import plot_model
 from keras import regularizers
-
-
-%matplotlib inline
 ```
 
-### Step 2: ##Reading files
+### Step 2: Reading files
 ##Reading files
 
 ```python
@@ -56,10 +53,13 @@ from keras import regularizers
 #Seperating files and annotations
 
 ```python
-plt.rcParams["figure.figsize"] = (30,6)
-plt.rcParams['lines.linewidth'] = 1
-plt.rcParams['lines.color'] = 'b'
-plt.rcParams['axes.grid'] = True 
+for f in filenames:
+    filename, file_extension = os.path.splitext(f)
+    
+    if(file_extension == '.csv'):
+        records.append(path + filename + file_extension)
+    else:
+        annotations.append(path + filename + file_extension) 
 ```
 
 ### Step 4: # Data Denoising
