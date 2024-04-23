@@ -46,7 +46,7 @@ from keras import regularizers
 !wget -q https://www.physionet.org/static/published-projects/mitdb/mit-bih-arrhythmia-database-1.0.0.zip
 !unzip -qo /content/mit-bih-arrhythmia-database-1.0.0.zip
 
-path = 'D:/1buatTA/mitbih_database/mitbih_database/'  
+path = 'D:/.../mitbih_database/mitbih_database/'  
 #input path
 window_size = 180
 maximum_counting = 10000
